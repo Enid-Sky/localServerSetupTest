@@ -1,3 +1,6 @@
+/* Empty JS object to act as endpoint for all routes */
+projectData = {};
+
 //Express to run server and routes
 const express = require('express');
 
@@ -13,8 +16,8 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 
 //Cross origin allowance
-app.require('cors');
-app.use(corse());
+const cors = require('cors');
+app.use(cors());
 
 //Initialize the main project folder
 app.use(express.static('WebsiteTest'));
@@ -22,11 +25,11 @@ app.use(express.static('WebsiteTest'));
 
 const port = 8000;
 //spin up the server
-const server = app.listener(port, listening);
+const server = app.listen(port, listener);
 //const server = app.listen(port,()=> {console.log(`running on localhost: ${port}`)});
 
 //Callback
-function listening() {
+function listener() {
   console.log('server is running');
   console.log(`running on localhost: ${port}`);
 };
