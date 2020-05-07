@@ -44,6 +44,10 @@ function listener() {
 *
 *
 *
+
+//Empty JS object to act as endpoint for all routes 
+projectData = {};
+
 //Express to run server and routes
 import express, {
   static
