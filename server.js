@@ -15,9 +15,10 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json());
 
-//Cross origin allowance
+/*Optional Cross origin allowance
 const cors = require('cors');
 app.use(cors());
+*/
 
 //Initialize the main project folder
 app.use(express.static('WebsiteTest'));
